@@ -24,21 +24,21 @@ public class EventHandlerImpl extends Thread implements EventHandler {
 	 * @see root.EventHandler#addEvent(root.MyEvent)
 	 */
 	@Override
-	public void addEvent(MyEvent event) throws Exception {
+	public void addEvent(MyEvent event) {
 		synchronized (events) {
 			if (state == State.STARTED) {
 				System.out.println(state + ", " + event.getName()  + " is added in " + System.nanoTime());
 				events.add(event);
 				events.notify();
 			} else {
-				throw new Exception();
+				throw new IllegalStateException("Cannot add event if handler is not running");
 			}
 		}
 
 	}
 
 	@Override
-	public void startHandler() throws Exception {
+	public void startHandler() {
 		System.out.println("Event handler started in " + System.nanoTime());
 		if (state != State.CREATED) {
 			throw new RuntimeException("Cannot start started or stopped handler");
@@ -48,7 +48,7 @@ public class EventHandlerImpl extends Thread implements EventHandler {
 	}
 
 	@Override
-	public void stopHandler() throws Exception {
+	public void stopHandler() {
 		if (state != State.STARTED) {
 			throw new RuntimeException("Cannot stop not started handler");
 		}
