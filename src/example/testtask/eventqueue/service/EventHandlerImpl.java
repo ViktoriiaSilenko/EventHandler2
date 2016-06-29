@@ -1,7 +1,8 @@
-package example.testtask.eventqueue;
+package example.testtask.eventqueue.service;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import example.testtask.eventqueue.model.MyEvent;
 
 public class EventHandlerImpl extends Thread implements EventHandler {
 	

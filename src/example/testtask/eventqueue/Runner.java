@@ -3,6 +3,12 @@ package example.testtask.eventqueue;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import example.testtask.eventqueue.model.BaseEventProducer;
+import example.testtask.eventqueue.model.EventProducer;
+import example.testtask.eventqueue.service.EventHandler;
+import example.testtask.eventqueue.service.EventHandlerImpl;
+import example.testtask.eventqueue.service.EventProducerFactory;
+
 /**
  * 
  * @author Viktoria Silenko
@@ -38,7 +44,6 @@ public class Runner {
 		}
 		
 		System.out.println(eventHandler);
-		
 
 	}
 

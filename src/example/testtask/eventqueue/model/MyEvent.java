@@ -1,4 +1,4 @@
-package example.testtask.eventqueue;
+package example.testtask.eventqueue.model;
 
 /**
  *

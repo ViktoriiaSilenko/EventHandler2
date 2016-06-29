@@ -1,4 +1,6 @@
-package example.testtask.eventqueue;
+package example.testtask.eventqueue.service;
+
+import example.testtask.eventqueue.model.MyEvent;
 
 /**
  * Created by IntelliJ IDEA.

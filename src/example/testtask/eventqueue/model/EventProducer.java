@@ -1,7 +1,11 @@
-package example.testtask.eventqueue;
+package example.testtask.eventqueue.model;
 
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
+
+import example.testtask.eventqueue.model.MyEvent;
+import example.testtask.eventqueue.service.EventHandler;
+
+import static java.util.concurrent.TimeUnit.MILLISECONDS;
 
 public class EventProducer extends BaseEventProducer {
 
@@ -18,7 +22,7 @@ public class EventProducer extends BaseEventProducer {
 	protected MyEvent createEvent() {
 		eventCount++;
 		try {
-			TimeUnit.MILLISECONDS.sleep(new Random().nextInt(MAX_DELAY));
+			MILLISECONDS.sleep(new Random().nextInt(MAX_DELAY));
 		} catch (InterruptedException e) {
 			throw new RuntimeException(e);
 		}

@@ -1,18 +1,18 @@
-package example.testtask.eventqueue;
+package example.testtask.eventqueue.service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
+import example.testtask.eventqueue.model.EventProducer;
+import static java.util.Objects.requireNonNull;
 
 
 public class EventProducerFactory {
-	private static final int EVENT_PRODUCER_COUNT = 3;
-	
+	private static final int EVENT_PRODUCER_COUNT = 5;
 	
 	private final EventHandler eventHandler;
 	
 	private EventProducerFactory(EventHandler eventHandler) {
-		this.eventHandler = Objects.requireNonNull(eventHandler);
+		this.eventHandler = requireNonNull(eventHandler);
 	}
 
 	public List<EventProducer> createEventProducers() {

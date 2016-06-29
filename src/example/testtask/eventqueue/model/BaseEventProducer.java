@@ -1,12 +1,14 @@
-package example.testtask.eventqueue;
+package example.testtask.eventqueue.model;
 
-import java.util.Objects;
+import static java.util.Objects.requireNonNull;
+import example.testtask.eventqueue.model.MyEvent;
+import example.testtask.eventqueue.service.EventHandler;
 
 public abstract class BaseEventProducer extends Thread {
 	private final EventHandler eventHandler;
 	
 	public BaseEventProducer(EventHandler eventHandler) {
-		this.eventHandler = Objects.requireNonNull(eventHandler);
+		this.eventHandler = requireNonNull(eventHandler);
 	}
 	
 	@Override
