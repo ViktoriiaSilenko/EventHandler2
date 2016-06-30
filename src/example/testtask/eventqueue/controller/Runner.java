@@ -1,4 +1,4 @@
-package example.testtask.eventqueue;
+package example.testtask.eventqueue.controller;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
