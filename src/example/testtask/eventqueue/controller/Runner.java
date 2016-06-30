@@ -3,10 +3,10 @@ package example.testtask.eventqueue.controller;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import example.testtask.eventqueue.model.BaseEventProducer;
-import example.testtask.eventqueue.model.EventProducer;
+import example.testtask.eventqueue.service.BaseEventProducer;
 import example.testtask.eventqueue.service.EventHandler;
 import example.testtask.eventqueue.service.EventHandlerImpl;
+import example.testtask.eventqueue.service.EventProducer;
 import example.testtask.eventqueue.service.EventProducerFactory;
 
 /**

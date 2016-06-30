@@ -2,7 +2,6 @@ package example.testtask.eventqueue.service;
 
 import java.util.ArrayList;
 import java.util.List;
-import example.testtask.eventqueue.model.EventProducer;
 import static java.util.Objects.requireNonNull;
 
 

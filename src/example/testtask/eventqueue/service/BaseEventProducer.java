@@ -1,4 +1,4 @@
-package example.testtask.eventqueue.model;
+package example.testtask.eventqueue.service;
 
 import static java.util.Objects.requireNonNull;
 import example.testtask.eventqueue.model.MyEvent;
